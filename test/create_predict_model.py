@@ -36,7 +36,7 @@ for s in reversed(range(1, 21)):
     tmp_train = train_sc_df[column_list].shift(s)
     tmp_test = test_sc_df[column_list].shift(s)
 
-    # column name
+# column name
     tmp_train.columns = "shift_" + tmp_train.columns + "_" + str(-(s-21))
     tmp_test.columns = "shift_" + tmp_test.columns + "_" + str(-(s-21))
 
